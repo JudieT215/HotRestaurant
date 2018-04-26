@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hot Resturant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <!-- Bootstrap Javascript and jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="server.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>Reservation Management</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Add an Reservation</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="add-Reservation">
+                            <form>
+                                <!--Name-->
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="Name">
+                                </div>
+                                <!--Table-->
+                                <div class="form-group">
+                                    <label for="Table">Table</label>
+                                    <input type="text" class="form-control" id="Table" placeholder="Table">
+                                </div>
+                                <!--Number in for Res-->
+                                <div class="form-group">
+                                    <label for="Age">Number of People for Reservation</label>
+                                    <input type="text" class="form-control" id="number" placeholder="Number">
+                                </div>
+                                <!--Date of res-->
+                                <div class="form-group">
+                                    <label for="date">Date of Reservation (DD/MM/YY) ex.01/01/89</label>
+                                    <input type="text" class="form-control" id="date" placeholder="Date">
+                                </div>
+                        
+                                <button type="submit" class="btn btn-primary" id="submitRes">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <p></p>
+        <p>
+            <i class="fab fa-github"></i> See project on Github</p>
+    </footer>
+    </div>
