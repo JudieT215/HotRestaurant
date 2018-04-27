@@ -10,6 +10,7 @@
     <script src="server.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,17 +19,36 @@
         <h1 class="text-center">Hot Restaurant</h1>
         <h4 class="text-center">We only have 5 tables! Book your seat before they're all gone!</h4>
         <div class="text-center">
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" id="tableSubmit">
                 <span class="glyphicon glyphicon-list-alt"></span>View Tables</button>
 
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-danger" id= "resSubmit">
                 <span class="glyphicon glyphicon-credit-card"></span>Make a Reservation</button>
         </div>
     </div>
     <div class="links">
-        <a href="/table">API Table Link</a>
+        <a href="table">API Table Link</a>
         <a href="/waitlist">API Waitlist</a>
     </div>
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+        $("#tableSubmit").on("click", function (event) {
+            event.preventDefault();
+             window.location.href = "table";
+
+            console.log("Table is clicked");
+        })
+
+
+    $("#resSubmit").on("click", function (event) {
+        event.preventDefault();
+        window.location.href = "res";
+
+        console.log("Res is clicked");
+    })
+
+</script>

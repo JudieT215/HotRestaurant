@@ -58,13 +58,13 @@
                                 </div>
                                 <!--Number in for Res-->
                                 <div class="form-group">
-                                    <label for="Number">Number of People for Reservation</label>
-                                    <input type="text" class="form-control" id="number" placeholder="Number">
+                                    <label for="Email">Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="Number">
                                 </div>
                                 <!--Date of res-->
                                 <div class="form-group">
-                                    <label for="date">Date of Reservation (DD/MM/YY) ex.01/01/89</label>
-                                    <input type="text" class="form-control" id="date" placeholder="Date">
+                                    <label for="unique_id">Unique Id</label>
+                                    <input type="text" class="form-control" id="unique_id" placeholder="unique_id">
                                 </div>
                         
                                 <button type="submit" class="btn btn-primary" id="submitRes">Submit</button>
@@ -93,26 +93,26 @@
             event.preventDefault();
             console.log("new res is clicked");
 })
-            // var newRes = {
-            //     name: $("#Name").val().trim(),
-            //     PhoneNumber: $("#PhoneNumber").val().trim(),
-            //     number: $("#number").val().trim(),
-            //     date: $("#date").val().trim()
-            // };
+            var newRes = {
+                name: $("#Name").val().trim(),
+                phone: $("#PhoneNumber").val().trim(),
+                email: $("#email").val().trim(),
+                unique_id: $("#unique_id").val().trim()
+            };
 
-            // // Question: What does this code do??
-            // $.post("/:customer", newRes)
-            //     .then(function (data) {
-            //         console.log(data);
-            //         alert("Adding New Reservation...");
-            //     });
+            // Question: What does this code do??
+            $.post("/:customer", newRes)
+                .then(function (data) {
+                    console.log(data);
+                    alert("Adding New Reservation...");
+                });
        
-        // });
+        ;
        
-        // ;
 
      $("#submitHome").on("click", function (event) {
         event.preventDefault();
+        window.location.href = "/";
         console.log("Home is clicked");
     })
     </script>
