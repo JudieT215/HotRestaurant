@@ -75,3 +75,24 @@
             <i class="fab fa-github"></i> See project on Github</p>
     </footer>
     </div>
+
+    <script type="text/javascript">
+           $.get("/table/customer", function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var wellSection = $("<div>");
+                    wellSection.addClass("wellCustomer");
+                    wellSection.attr("id", "-well-" + i);
+                    $("#well-section").append(wellSection);
+
+                    $("#customer-well-" + i).append("<h2>" + data[i].name + "</h2>");
+                    $("#customer-well-" + i).append("<h3>Phone Number: " + data[i].phone + "</h4>");
+                    $("#customer-well-" + i).append("<h3> Email: " + data[i].email + "</h4>");
+                    $("#customer-well-" + i).append("<h3>ID: " + data[i].unique_id+ "</h4>");
+                }
+            });
+
+     $("#submitHome").on("click", function (event) {
+        event.preventDefault();
+        console.log("Home is clicked");
+    })
+    </script>

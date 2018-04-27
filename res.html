@@ -58,7 +58,7 @@
                                 </div>
                                 <!--Number in for Res-->
                                 <div class="form-group">
-                                    <label for="Age">Number of People for Reservation</label>
+                                    <label for="Number">Number of People for Reservation</label>
                                     <input type="text" class="form-control" id="number" placeholder="Number">
                                 </div>
                                 <!--Date of res-->
@@ -84,3 +84,35 @@
             <i class="fab fa-github"></i> See project on Github</p>
     </footer>
     </div>
+    </body>
+
+
+    <script type="text/javascript">
+
+      $("#submitRes").on("click", function (event) {
+            event.preventDefault();
+            console.log("new res is clicked");
+})
+            // var newRes = {
+            //     name: $("#Name").val().trim(),
+            //     PhoneNumber: $("#PhoneNumber").val().trim(),
+            //     number: $("#number").val().trim(),
+            //     date: $("#date").val().trim()
+            // };
+
+            // // Question: What does this code do??
+            // $.post("/:customer", newRes)
+            //     .then(function (data) {
+            //         console.log(data);
+            //         alert("Adding New Reservation...");
+            //     });
+       
+        // });
+       
+        // ;
+
+     $("#submitHome").on("click", function (event) {
+        event.preventDefault();
+        console.log("Home is clicked");
+    })
+    </script>
